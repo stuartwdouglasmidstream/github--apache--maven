@@ -1,36 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>org.apache.maven</groupId>
     <artifactId>maven-parent</artifactId>
     <version>41</version>
-    <relativePath />
+    <relativePath></relativePath>
   </parent>
-
   <artifactId>maven</artifactId>
   <version>3.9.6</version>
   <packaging>pom</packaging>
-
   <name>Apache Maven</name>
   <description>Maven is a software build management and
     comprehension tool. Based on the concept of a project object model:
@@ -41,7 +21,6 @@ under the License.
     process.</description>
   <url>https://maven.apache.org/ref/${project.version}/</url>
   <inceptionYear>2001</inceptionYear>
-
   <contributors>
     <contributor>
       <name>Stuart McCulloch</name>
@@ -83,7 +62,6 @@ under the License.
       <name>Martin Kanters (MNG-6665)</name>
     </contributor>
   </contributors>
-
   <modules>
     <module>maven-plugin-api</module>
     <module>maven-builder-support</module>
@@ -100,7 +78,6 @@ under the License.
     <module>maven-compat</module>
     <module>apache-maven</module>
   </modules>
-
   <scm>
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven.git</developerConnection>
@@ -122,52 +99,42 @@ under the License.
     </site>
     <downloadUrl>https://maven.apache.org/download.html</downloadUrl>
   </distributionManagement>
-
   <properties>
     <javaVersion>8</javaVersion>
-    <minimalMavenBuildVersion>3.5.4</minimalMavenBuildVersion>
-
-    <sisuVersion>0.9.0.M2</sisuVersion>
-    <classWorldsVersion>2.7.0</classWorldsVersion>
-    <commonsCliVersion>1.5.0</commonsCliVersion>
-    <commonsIoVersion>2.11.0</commonsIoVersion>
     <commonsLangVersion>3.12.0</commonsLangVersion>
-    <junitVersion>4.13.2</junitVersion>
-    <hamcrestVersion>2.2</hamcrestVersion>
-    <mockitoVersion>4.11.0</mockitoVersion>
-    <!-- plexus 2.1.1 is broken, no new release exists yet (nor will exist) -->
-    <plexusVersion>2.1.0</plexusVersion>
-    <plexusInterpolationVersion>1.26</plexusInterpolationVersion>
-    <!-- Blocked by 3.4.0+ changes, see MNG-7710 -->
-    <plexusUtilsVersion>3.5.1</plexusUtilsVersion>
-    <guiceVersion>5.1.0</guiceVersion>
     <guavaVersion>32.0.1-jre</guavaVersion>
-    <guavafailureaccessVersion>1.0.1</guavafailureaccessVersion>
-    <wagonVersion>3.5.3</wagonVersion>
-    <securityDispatcherVersion>2.0</securityDispatcherVersion>
-    <cipherVersion>2.0</cipherVersion>
-    <jxpathVersion>1.3</jxpathVersion>
-    <resolverVersion>1.9.18</resolverVersion>
-    <slf4jVersion>1.7.36</slf4jVersion>
-    <xmlunitVersion>2.9.1</xmlunitVersion>
-    <powermockVersion>2.0.9</powermockVersion>
+    <plexusVersion>2.1.0</plexusVersion>
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
-    <!-- Control the name of the distribution and information output by mvn -->
-    <distributionId>apache-maven</distributionId>
-    <distributionShortName>Maven</distributionShortName>
-    <distributionName>Apache Maven</distributionName>
-    <maven.site.path>ref/3-LATEST</maven.site.path>
     <checkstyle.violation.ignore>None</checkstyle.violation.ignore>
+    <distributionId>apache-maven</distributionId>
+    <cipherVersion>2.0</cipherVersion>
+    <resolverVersion>1.9.18</resolverVersion>
+    <distributionShortName>Maven</distributionShortName>
+    <hamcrestVersion>2.2</hamcrestVersion>
+    <powermockVersion>2.0.9</powermockVersion>
+    <plexusUtilsVersion>3.5.1</plexusUtilsVersion>
+    <wagonVersion>3.5.3</wagonVersion>
+    <junitVersion>4.13.2</junitVersion>
     <checkstyle.excludes>**/package-info.java</checkstyle.excludes>
+    <guavafailureaccessVersion>1.0.1</guavafailureaccessVersion>
+    <guiceVersion>5.1.0</guiceVersion>
+    <classWorldsVersion>2.7.0</classWorldsVersion>
+    <maven.site.path>ref/3-LATEST</maven.site.path>
+    <mockitoVersion>4.11.0</mockitoVersion>
+    <slf4jVersion>1.7.36</slf4jVersion>
+    <commonsIoVersion>2.11.0</commonsIoVersion>
+    <commonsCliVersion>1.5.0</commonsCliVersion>
+    <minimalMavenBuildVersion>3.5.4</minimalMavenBuildVersion>
+    <sisuVersion>0.9.0.M2</sisuVersion>
+    <plexusInterpolationVersion>1.26</plexusInterpolationVersion>
+    <xmlunitVersion>2.9.1</xmlunitVersion>
+    <distributionName>Apache Maven</distributionName>
+    <jxpathVersion>1.3</jxpathVersion>
     <project.build.outputTimestamp>2023-11-28T09:59:53Z</project.build.outputTimestamp>
+    <securityDispatcherVersion>2.0</securityDispatcherVersion>
   </properties>
-
-  <!--bootstrap-start-comment-->
   <dependencyManagement>
-    <!--bootstrap-end-comment-->
     <dependencies>
-      <!--  Maven Modules -->
-      <!--bootstrap-start-comment-->
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-model</artifactId>
@@ -233,8 +200,6 @@ under the License.
         <artifactId>maven-slf4j-provider</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <!--bootstrap-end-comment-->
-      <!--  Plexus -->
       <dependency>
         <groupId>org.codehaus.plexus</groupId>
         <artifactId>plexus-utils</artifactId>
@@ -252,7 +217,6 @@ under the License.
         </exclusions>
       </dependency>
       <dependency>
-        <!-- This is a transitive dep of com.google.inject:guice -->
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${guavaVersion}</version>
@@ -284,7 +248,6 @@ under the License.
         </exclusions>
       </dependency>
       <dependency>
-        <!-- This is a transitive dep of com.google.guava:guava -->
         <groupId>com.google.guava</groupId>
         <artifactId>failureaccess</artifactId>
         <version>${guavafailureaccessVersion}</version>
@@ -295,7 +258,6 @@ under the License.
         <version>${sisuVersion}</version>
         <exclusions>
           <exclusion>
-            <!-- Way too easy to conflict with plugins to be in Maven and leak in plugins -->
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
           </exclusion>
@@ -342,7 +304,6 @@ under the License.
         <artifactId>maven-shared-utils</artifactId>
         <version>3.3.4</version>
         <exclusions>
-          <!-- We use org.apache.maven.shared.utils.logging only in Maven Core -->
           <exclusion>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -371,7 +332,6 @@ under the License.
         <version>1.2.12</version>
         <optional>true</optional>
       </dependency>
-      <!--  Wagon -->
       <dependency>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-provider-api</artifactId>
@@ -387,7 +347,6 @@ under the License.
         <artifactId>wagon-http</artifactId>
         <version>${wagonVersion}</version>
       </dependency>
-      <!--  Repository -->
       <dependency>
         <groupId>org.apache.maven.resolver</groupId>
         <artifactId>maven-resolver-api</artifactId>
@@ -428,7 +387,6 @@ under the License.
         <artifactId>maven-resolver-transport-wagon</artifactId>
         <version>${resolverVersion}</version>
       </dependency>
-      <!-- HttpClient: used by Wagon and Resolver-Http -->
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpcore</artifactId>
@@ -439,7 +397,6 @@ under the License.
         <artifactId>httpclient</artifactId>
         <version>4.5.14</version>
       </dependency>
-      <!--  Commons -->
       <dependency>
         <groupId>commons-cli</groupId>
         <artifactId>commons-cli</artifactId>
@@ -542,10 +499,7 @@ under the License.
         <scope>test</scope>
       </dependency>
     </dependencies>
-    <!--bootstrap-start-comment-->
   </dependencyManagement>
-  <!--bootstrap-end-comment-->
-  <!--bootstrap-start-comment-->
   <dependencies>
     <dependency>
       <groupId>org.hamcrest</groupId>
@@ -558,8 +512,6 @@ under the License.
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <!--bootstrap-end-comment-->
-
   <build>
     <pluginManagement>
       <plugins>
@@ -577,14 +529,12 @@ under the License.
           </executions>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
           <configuration>
             <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
             <argLine>-Xmx256m</argLine>
@@ -599,11 +549,11 @@ under the License.
           <executions>
             <execution>
               <id>modello-site-docs</id>
+              <phase>pre-site</phase>
               <goals>
                 <goal>xdoc</goal>
                 <goal>xsd</goal>
               </goals>
-              <phase>pre-site</phase>
             </execution>
             <execution>
               <id>modello</id>
@@ -615,7 +565,6 @@ under the License.
             </execution>
           </executions>
         </plugin>
-        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
@@ -657,6 +606,15 @@ under the License.
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>animal-sniffer-maven-plugin</artifactId>
         <version>1.23</version>
+        <executions>
+          <execution>
+            <id>check-java-compat</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
         <configuration>
           <signature>
             <groupId>org.codehaus.mojo.signature</groupId>
@@ -664,18 +622,8 @@ under the License.
             <version>1.0</version>
           </signature>
         </configuration>
-        <executions>
-          <execution>
-            <id>check-java-compat</id>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <phase>process-classes</phase>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-doap-plugin</artifactId>
         <version>1.2</version>
         <configuration>
@@ -689,41 +637,14 @@ under the License.
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.rat</groupId>
-        <artifactId>apache-rat-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>rat-check</id>
-            <inherited>false</inherited>
-            <configuration>
-              <excludes>
-                <exclude>**/.gitattributes</exclude>
-                <exclude>src/test/resources*/**</exclude>
-                <exclude>src/test/projects/**</exclude>
-                <exclude>src/test/remote-repo/**</exclude>
-                <exclude>**/*.odg</exclude>
-                <exclude>.asf.yaml</exclude>
-                <!--
-                  ! Excluded the license files itself cause they do not have have a license of themselves.
-                -->
-                <exclude>src/main/appended-resources/licenses/EPL-1.0.txt</exclude>
-                <exclude>src/main/appended-resources/licenses/unrecognized-aopalliance-1.0.txt</exclude>
-                <exclude>src/main/appended-resources/licenses/unrecognized-javax.annotation-api-1.3.2.txt</exclude>
-              </excludes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <executions>
           <execution>
             <id>ensure-no-sonatype-cipher-and-sec-dispatcher</id>
+            <phase>validate</phase>
             <goals>
               <goal>enforce</goal>
             </goals>
-            <phase>validate</phase>
             <configuration>
               <rules>
                 <bannedDependencies>
@@ -741,7 +662,6 @@ under the License.
       </plugin>
     </plugins>
   </build>
-
   <profiles>
     <profile>
       <id>apache-release</id>
@@ -753,7 +673,6 @@ under the License.
               <execution>
                 <id>source-release-assembly</id>
                 <configuration>
-                  <!-- we have a dedicated distribution module -->
                   <skipAssembly>true</skipAssembly>
                 </configuration>
               </execution>
@@ -767,17 +686,7 @@ under the License.
       <reporting>
         <plugins>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <configuration>
-              <tags>
-                <tag>
-                  <name>provisional</name>
-                  <placement>tf</placement>
-                  <head>Provisional:</head>
-                </tag>
-              </tags>
-            </configuration>
             <reportSets>
               <reportSet>
                 <id>aggregate</id>
@@ -787,9 +696,17 @@ under the License.
                 <inherited>false</inherited>
               </reportSet>
             </reportSets>
+            <configuration>
+              <tags>
+                <tag>
+                  <name>provisional</name>
+                  <placement>tf</placement>
+                  <head>Provisional:</head>
+                </tag>
+              </tags>
+            </configuration>
           </plugin>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
             <reportSets>
               <reportSet>
@@ -814,12 +731,10 @@ under the License.
       <build>
         <plugins>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
               <systemProperties combine.children="append">
                 <property>
-                  <!-- Pass this through to the tests (if set!) to have them pick the right repository -->
                   <name>maven.repo.local</name>
                   <value>${maven.repo.local}</value>
                 </property>
